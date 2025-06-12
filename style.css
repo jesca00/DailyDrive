@@ -1,0 +1,108 @@
+
+ body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e3f2fd;
+      color: #0d47a1;
+    }
+
+    .navbar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      background-color: #1565c0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: white;
+    }
+
+    .navbar-items li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 12px;
+    }
+
+    .navbar-items a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background:#1976d2;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .motto {
+      font-size: 24px;
+      font-style: italic;
+    }
+
+    section, .story, .products-list, .features-list, .team-list, .mission, .vision, .goals, .join-us {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p, li, blockquote {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    ul {
+      text-align: left;
+      /*max-width: 600px;*/
+      margin: 0 auto;
+      list-style-type: disc;
+    }
+
+    .product-card, .feature-card, .team-card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin: 20px auto;
+      max-width: 500px;
+    }
+
+    blockquote {
+      background: #bbdefb;
+      border-left: 5px solid #0d47a1;
+      padding: 1rem;
+      font-style: italic;
+      border-radius: 5px;
+      margin: 1.5rem auto;
+      max-width: 700px;
+    }
+
+    footer {
+      background: #0d47a1;
+      color: #bbdefb;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .one-liner {
+      font-weight: bold;
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      color: #0d47a1;
+    }
