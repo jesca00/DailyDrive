@@ -106,3 +106,40 @@
       font-size: 1.2rem;
       color: #0d47a1;
     }
+
+body.dark-theme {
+  background-color: #250d49;
+  color: #4168f4;
+}
+body.dark-theme a {
+  color: #aec2ef;
+}
+
+.quote-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #82a3f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.quote-button:hover {
+  background-color: #99d0f1;
+}
+
+.quote-box {
+  margin-top: 1rem;
+  padding: 60px 20px;
+  border-left: 4px solid #244077;
+  background-color: #82bcfa;
+  font-style: italic;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  max-width: 500px;
+}
+
+
