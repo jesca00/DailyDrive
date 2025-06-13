@@ -165,7 +165,7 @@ body.dark-theme a {
 .chatbot-toggle {
   width: 50px;
   height: 50px;
-  background-color: #4caf50;
+  background-color: #1b71d4;
   color: white;
   font-size: 24px;
   border-radius: 50%;
@@ -193,7 +193,7 @@ body.dark-theme a {
 }
 
 .chatbot-header {
-  background: #4caf50;
+  background: #106ff4;
   color: white;
   padding: 12px;
   font-weight: bold;
@@ -221,7 +221,7 @@ body.dark-theme a {
 
 .chatbot-input button {
   padding: 10px 16px;
-  background: #4caf50;
+  background: #1959fb;
   color: white;
   border: none;
   cursor: pointer;
@@ -229,7 +229,7 @@ body.dark-theme a {
 
 .instruction {
   font-size: 0.9rem;
-  color: #444;
+  color: #444444;
   margin-bottom: 10px;
 }
 
@@ -243,7 +243,7 @@ body.dark-theme a {
 }
 
 .user-msg {
-  background-color: #4caf50;
+  background-color: #1d5cef;
   color: white;
   align-self: flex-end;
   margin-left: auto;
@@ -255,30 +255,4 @@ body.dark-theme a {
   color: #000;
   align-self: flex-start;
   border-bottom-left-radius: 0;
-}
-
-/* Sample question buttons */
-.sample-questions {
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.sample-questions button {
-  background: #f0f0f0;
-  border: 1px solid #ccc;
-  padding: 6px 10px;
-  text-align: left;
-  cursor: pointer;
-  font-size: 0.9rem;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-.sample-questions button:hover {
-  background: #e8ffe8;
 }

@@ -74,7 +74,16 @@ fetch('context.txt')
   .catch(() => {
     // fallback if fetch fails
     startupContext = `
-      [INSERT YOUR STARTUP CONTEXT HERE: story, mission, products, team, etc.]
+      DailyDrive is a youth empowerment startup founded by Chance Jesca Bizima. It began as a response to the lack of motivation, structure, and routine I noticed in students' lives. DailyDrive offers tools like a Smart Alarm, Focused Planner, and a chatbot named DailyBot to help users build daily habits. 
+
+Mission: Empower people to rebuild their lives through intentional habits and structured routines.
+
+Vision: A world where anyone can take control of their habits, time, and mindset.
+
+Team includes: Chance Jesca Bizima (Product Lead), Ishimwe Eric (UX Designer), and Lucky Prince (Community Manager).
+
+To contact or support us, visit the “Join Us” section or email us at help@dailydrive.org.
+
     `;
   });
 
