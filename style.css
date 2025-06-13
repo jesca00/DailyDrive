@@ -1,145 +1,234 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e3f2fd;
+    color: #0d47a1;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1565c0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
 
- body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #e3f2fd;
-      color: #0d47a1;
-    }
+.navbar-items li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 12px;
+}
 
-    .navbar {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      background-color: #1565c0;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      color: white;
-    }
+.navbar-items a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    .navbar-items li {
-      display: inline-block;
-      list-style: none;
-      margin: 0 12px;
-    }
+.hero {
+    background:#1976d2;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
 
-    .navbar-items a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
 
-    .hero {
-      background:#1976d2;
-      height: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-    }
+.motto {
+    font-size: 24px;
+    font-style: italic;
+}
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+section, .story, .products-list, .features-list, .team-list, .mission, .vision, .goals, .join-us {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-    .motto {
-      font-size: 24px;
-      font-style: italic;
-    }
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
 
-    section, .story, .products-list, .features-list, .team-list, .mission, .vision, .goals, .join-us {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-    }
+p, li, blockquote {
+    font-size: 18px;
+    line-height: 1.6;
+}
 
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
+ul {
+    text-align: left;
+    /*max-width: 600px;*/
+    margin: 0 auto;
+    list-style-type: disc;
+}
 
-    p, li, blockquote {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+.product-card, .feature-card, .team-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin: 20px auto;
+    max-width: 500px;
+}
 
-    ul {
-      text-align: left;
-      /*max-width: 600px;*/
-      margin: 0 auto;
-      list-style-type: disc;
-    }
+blockquote {
+    background: #bbdefb;
+    border-left: 5px solid #0d47a1;
+    padding: 1rem;
+    font-style: italic;
+    border-radius: 5px;
+    margin: 1.5rem auto;
+    max-width: 700px;
+}
 
-    .product-card, .feature-card, .team-card {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      margin: 20px auto;
-      max-width: 500px;
-    }
+footer {
+    background: #0d47a1;
+    color: #bbdefb;
+    text-align: center;
+    padding: 20px;
+}
 
-    blockquote {
-      background: #bbdefb;
-      border-left: 5px solid #0d47a1;
-      padding: 1rem;
-      font-style: italic;
-      border-radius: 5px;
-      margin: 1.5rem auto;
-      max-width: 700px;
-    }
-
-    footer {
-      background: #0d47a1;
-      color: #bbdefb;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .one-liner {
-      font-weight: bold;
-      margin-top: 1.5rem;
-      font-size: 1.2rem;
-      color: #0d47a1;
-    }
+.one-liner {
+    font-weight: bold;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: #0d47a1;
+}
 
 body.dark-theme {
-  background-color: #250d49;
-  color: #4168f4;
+    background-color: #250d49;
+    color: #4168f4;
 }
+    
 body.dark-theme a {
-  color: #aec2ef;
+    color: #aec2ef;
 }
 
+.theme-toggle {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #82a3f2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+    
 .quote-button {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #82a3f2;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #1855e4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
 .quote-button:hover {
-  background-color: #99d0f1;
+    background-color: #99d0f1;
 }
-
+    
 .quote-box {
-  margin-top: 1rem;
-  padding: 60px 20px;
-  border-left: 4px solid #244077;
-  background-color: #82bcfa;
-  font-style: italic;
-  font-size: 1.1rem;
-  border-radius: 6px;
-  max-width: 500px;
+    margin-top: 1rem;
+    margin-left: 235px;
+    padding: 20px;
+    border-left: 4px solid #244077;
+    background-color: #75a0f6;
+    font-style: italic;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    max-width: 500px;
 }
 
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background: #ffffff;
+    border: 1px solid #9a9afa;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    o  z-index: 1000;
+}
 
+.chatbot-header {
+    background: #053fee;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background: #f9f9f9;
+}
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.chatbot-input button {
+    padding: 10px 16px;
+    background: #0657d896;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.chatbot-input button:hover {
+    background: #0732a9;
+}
+
+.chat-bubble {
+    max-width: 80%;
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 12px;
+    line-height: 1.4;
+    display: inline-block;
+    clear: both;
+}
+
+.bot {
+    background: #e0e0e0;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.user {
+    background: #4caf50;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+    margin-left: auto;
+}
