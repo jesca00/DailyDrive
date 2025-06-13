@@ -84,19 +84,19 @@
     <h2>Meet the Team</h2>
 
     <div class="team-card">
-      <h3>Uwitonze Diane</h3>
+      <h3>Chance Jesca Bizima</h3>
       <p><strong>Role:</strong> Co-Founder & Product Lead</p>
       <p>Leads app design and ensures features help users build better routines.</p>
     </div>
 
     <div class="team-card">
-      <h3>Kevin Niyonsenga</h3>
+      <h3>Ishimwe Eric</h3>
       <p><strong>Role:</strong> UX Designer</p>
       <p>Designs the interface for users to plan and track their day.</p>
     </div>
 
     <div class="team-card">
-      <h3>Alice Uwase</h3>
+      <h3>Lucky Prince</h3>
       <p><strong>Role:</strong> Community Manager</p>
       <p>Engages with users and collects feedback for future updates.</p>
     </div>
@@ -132,14 +132,29 @@
     <p class="one-liner">“When structure meets motivation, even the smallest habit can change your life.”</p>
   </section>
 
-  <div class="chatbot-container">
-  <div class="chatbot-header">DailyBot</div>
-  <div class="chatbot-messages" id="chatMessages"></div>
-  <div class="chatbot-input">
-    <input type="text" id="userInput" placeholder="Type your message..." />
-    <button id="sendBtn">Send</button>
+<div class="chatbot-widget" id="chatbotWidget">
+  <div class="chatbot-toggle" id="chatbotToggle">💬</div>
+  <div class="chatbot-box hidden" id="chatbotBox">
+    <div class="chatbot-header">Ask DDBot</div>
+    <div class="chatbot-messages" id="chatArea">
+      <p class="instruction">Ask our AI about our story, services, or how you can get involved.</p>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="chatInput" placeholder="Type your message..." />
+      <button id="chatSend">Send</button>
+    </div>
   </div>
 </div>
+
+<div class="sample-questions">
+  <button class="sample-q">Who founded the startup?</button>
+  <button class="sample-q">What problems does it solve?</button>
+  <button class="sample-q">What services or products does it offer?</button>
+  <button class="sample-q">How can someone support or contact the team?</button>
+  <button class="sample-q">What’s the startup’s vision or long-term goal?</button>
+</div>
+
+<script src="https://js.puter.com/v2/"></script>
 
 <footer>
     <p>&copy; 2025 DailyDrive. All rights reserved.</p>

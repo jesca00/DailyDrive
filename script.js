@@ -54,39 +54,69 @@ document.querySelectorAll('.navbar-items a').forEach(link => {
   });
 });
 
-const sendBtn = document.getElementById("sendBtn");
-const userInput = document.getElementById("userInput");
-const chatMessages = document.getElementById("chatMessages");
+// === Toggle chatbot box ===
+const toggle = document.getElementById('chatbotToggle');
+const box = document.getElementById('chatbotBox');
+toggle.addEventListener('click', () => box.classList.toggle('hidden'));
 
-function addMessage(text, sender) {
-  const message = document.createElement("div");
-  message.className = `chat-bubble ${sender}`;
-  message.textContent = text;
-  chatMessages.appendChild(message);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+// === Chat elements ===
+const chatInput = document.getElementById('chatInput');
+const chatSend = document.getElementById('chatSend');
+const chatArea = document.getElementById('chatArea');
+
+// === Load context from file (bonus)
+let startupContext = '';
+fetch('context.txt')
+  .then(response => response.text())
+  .then(data => {
+    startupContext = data;
+  })
+  .catch(() => {
+    // fallback if fetch fails
+    startupContext = `
+      [INSERT YOUR STARTUP CONTEXT HERE: story, mission, products, team, etc.]
+    `;
+  });
+
+// === Function to append message to chat
+function appendMessage(text, type) {
+  const msg = document.createElement('div');
+  msg.className = type === 'user' ? 'user-msg' : 'bot-msg';
+  msg.textContent = text;
+  chatArea.appendChild(msg);
+  chatArea.scrollTop = chatArea.scrollHeight;
 }
 
-function handleSend() {
-  const userText = userInput.value.trim();
-  if (userText === "") return;
+// === Send user input to Puter.ai ===
+function sendChat() {
+  const message = chatInput.value.trim();
+  if (!message) return;
 
-  addMessage(userText, "user");
-  userInput.value = "";
+  appendMessage(message, 'user');
+  chatInput.value = '';
 
-  setTimeout(() => {
-    const responses = [
-      "Hi there! How can I help you today?",
-      "Stay focused—you're doing great!",
-      "Remember: small habits lead to big changes.",
-      "I'm here to keep you on track!"
-    ];
-    const response = responses[Math.floor(Math.random() * responses.length)];
-    addMessage(response, "bot");
-  }, 600);
+  puter.ai.chat({
+    messages: [
+      { role: 'system', content: startupContext },
+      { role: 'user', content: message }
+    ]
+  }).then(res => {
+    appendMessage(res.message.content, 'bot');
+  }).catch(() => {
+    appendMessage("Oops! Something went wrong. Try again later.", 'bot');
+  });
 }
 
-sendBtn.addEventListener("click", handleSend);
-userInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") handleSend();
+// === Handle send ===
+chatSend.addEventListener('click', sendChat);
+chatInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') sendChat();
 });
 
+// === Sample Q&A buttons ===
+document.querySelectorAll('.sample-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    chatInput.value = btn.textContent;
+    sendChat();
+  });
+});
